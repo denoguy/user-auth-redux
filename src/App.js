@@ -10,9 +10,10 @@ import { login, logout } from "./features/userSlice";
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
-  console.log(user);
+  // console.log(user);
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
+      console.log(authUser);
       if (authUser) {
         dispatch(
           login({
@@ -23,10 +24,10 @@ function App() {
           })
         );
       } else {
-        //the user is logged out
+        dispatch(logout());
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return <div className="app">{user ? <Profile /> : <Login />}</div>;
 }
