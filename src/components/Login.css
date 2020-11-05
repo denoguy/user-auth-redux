@@ -1,0 +1,33 @@
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-image: linear-gradient(180deg, #30336b, #4834d4);
+}
+
+.login__container {
+  height: 500px;
+  width: 450px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 15px;
+}
+
+.login__container > img {
+  height: 150px;
+}
+
+.login__container > button {
+  background-color: #ea4335;
+  color: white;
+  border: none;
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+}
